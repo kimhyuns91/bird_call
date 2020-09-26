@@ -24,11 +24,11 @@ def home():
 def Stats():
     return render_template("findings.html")
 
-# Set route
-@app.route("/Sound")
-def Sound():
-    # Return the template with the teams list passed in
-    return render_template('Sound1.html')
+# # Set route
+# @app.route("/Sound")
+# def Sound():
+#     # Return the template with the teams list passed in
+#     return render_template('Sound1.html')
 
 # Set route
 @app.route("/Teams")
