@@ -38,7 +38,12 @@ def model_input():
     BUCKET_NAME = 'thunderstruck-duck' # replace with your bucket name
     KEY = "sample_mp3.mp3" # replace with your object key
 
-    s3 = boto3.resource('s3')
+    s3 = boto3.client('s3',
+                        aws_access_key_id='AKIAISITTOGCJRNF46HQ',
+                        aws_secret_access_key= 'bq/VRAme7BxDMqf3hgEMLZdrJNVvrtdQ4VmoGAdB',
+                        )
+    BUCKET_NAME = "thunderstruck-duck"
+
 
     try:
         s3.Bucket(BUCKET_NAME).download_file(KEY, "sample_mp3.mp3")
