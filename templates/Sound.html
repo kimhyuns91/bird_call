@@ -14,7 +14,7 @@
     <!-- import wave --------------------------------------------------------------------------------->
     <script src="https://unpkg.com/wavesurfer.js"></script>
     <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.spectrogram.js"></script>
-    <script src="{{ url_for ('static', filename='index.js') }}" async></script>
+    <script src="{{ url_for ('static', filename='index.js') }}" ></script>
 
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
@@ -22,7 +22,7 @@
 <body>
     <div class="navigation-bar">
         <div id="navigation-container">
-            <!-- <img id="bird_logo" src="Visualizations/bird-icon-small.png">  -->
+            <img src="{{ url_for('static', filename='Visualizations/bird-icon-small.png') }}">   
             <ul>
                 <li><a href="/#">Home</a></li>
                 <li><a href="/Findings">Findings</a></li>
