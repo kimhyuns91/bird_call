@@ -1,15 +1,15 @@
 from flask import Flask, redirect, url_for, render_template, request
 from werkzeug.utils import secure_filename
 
-import boto3
+# import boto3
 # from import_and_model import model_input
 
 
-s3 = boto3.client('s3',
-                    aws_access_key_id='AKIAISITTOGCJRNF46HQ',
-                    aws_secret_access_key= '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',
-                     )
-BUCKET_NAME = "thunderstruck-duck"
+# s3 = boto3.client('s3',
+#                     aws_access_key_id='AKIAISITTOGCJRNF46HQ',
+#                     aws_secret_access_key= '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',
+#                      )
+# BUCKET_NAME = "thunderstruck-duck"
 
 # Create an instance of our Flask app.
 app = Flask(__name__)
