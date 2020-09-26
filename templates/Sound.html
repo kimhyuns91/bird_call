@@ -11,10 +11,10 @@
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='team.css') }}">
 
-
-
-
-
+    <!-- import wave --------------------------------------------------------------------------------->
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.spectrogram.js"></script>
+    <script src="{{ url_for ('static', filename='index.js') }}" async></script>
 
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
@@ -36,37 +36,47 @@
         <br>
         <br>
         <br>
-        
+        </div>
 
+    </div>
 
-        <!-- <div id="waveform"></div>
-        <div id="spectogram"></div> -->
+    <row><br><br><br></row>
+
+    <br>
+    <div class ="container">
+
+        <div id="waveform"></div>
+        <div id="spectogram"></div>
         <br>
-    
-          <!-- Create action buttons -->
-          <input type="button" id="btn-play" value="Play" disabled="disabled"/>
-          <input type="button" id="btn-pause" value="Pause" disabled="disabled"/>
-          <input type="button" id="btn-stop" value="Stop" disabled="disabled" />
+        <!-- Create action buttons -->
+        <input type="button" id="btn-play" value="Play" disabled="disabled"/>
+        <input type="button" id="btn-pause" value="Pause" disabled="disabled"/>
+        <input type="button" id="btn-stop" value="Stop" disabled="disabled" />
+            
+        <br>
+   </div>
 
-    
 
-          <form action="/upload" method="post" enctype="multipart/form-data">
-            <p> class="card-text">Choose a file to upload it to AWS S3
+   <row><br><br><br></row>
+
+
+   <div class ="container">
+
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <p> Choose a file to upload it to AWS S3
             </p>
             <input type="file" name="file" value="file">
                <hr>
             <input type="submit" name="upload" value="Upload" class="btn btn-success">
           </form>
-        
-       
-        
 
+        <br>
 
-
-
-
-    </div>
-
+        <div class="card">
+            <div class="card-body">
+            There is {{  likelihood  }} chance that it is {{ name_of_bird}}
+            </div>
+        </div>
     </div>
 
 </body>
