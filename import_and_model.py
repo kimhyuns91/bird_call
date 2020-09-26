@@ -11,9 +11,7 @@ import warnings
 from sklearn.utils import shuffle
 from sklearn.utils import class_weight
 from PIL import Image
-from uuid import uuid4
 import sklearn
-from tqdm import tqdm
 
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
@@ -28,9 +26,6 @@ from tensorflow.keras.layers import Dense, Flatten, Dropout, Activation, LSTM, S
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.applications import EfficientNetB0
 from keras.models import load_model
-
-import seaborn as sns
-sns.set()
 
 import boto3
 import botocore
