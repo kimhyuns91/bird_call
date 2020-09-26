@@ -82,4 +82,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 // Load the audio file from your domain !
-Spectrum.load('Visualizations/american_crow.mp3');
+Spectrum.load('static/Visualizations/american_crow.mp3');
